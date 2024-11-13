@@ -11,10 +11,16 @@ try:
          STUDENTID            INT     NOT NULL,
          ADDRESS        CHAR(50),
          SCORE         REAL);''')
+	conn.execute('''CREATE TABLE COMPANY2
+         (ID INT PRIMARY KEY     NOT NULL,
+         NAME           TEXT    NOT NULL,
+         STUDENTID            INT     NOT NULL,
+         ADDRESS        CHAR(50),
+         SCORE         REAL);''')
 	print ("Table created successfully")
 	conn.close()
 except:
-	pass
+	raise Exception
 
 """ INSERT DATA INTO TABLE """
 try:
